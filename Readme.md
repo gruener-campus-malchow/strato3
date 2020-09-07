@@ -1,4 +1,4 @@
-# strato2
+# strato3
 Dieses Repository enthält Code und Dokumente, die für einige Teilmissionen des Stratosphärenflugs "Strato II" relevant sind.
 Beteiligt sind
 * Robert-Havemann-Gymnasium Karow(Leitung und diverse Teilmissionen)
