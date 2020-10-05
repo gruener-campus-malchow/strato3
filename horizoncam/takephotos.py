@@ -2,7 +2,7 @@ from picamera import PiCamera, Color
 from time import sleep
 from datetime import datetime
 
-from photo_frequency import getfrequency
+from frequency import getfrequency
 
 speedlist=[2,4,8,10,50,100,200,500]
 

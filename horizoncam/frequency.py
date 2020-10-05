@@ -1,19 +1,20 @@
 #!/usr/bin/python3
 import datetime
 import configparser
+import thread
 
 conf = configparser.ConfigParser()
-conf.read('/home/video/Schreibtisch/mission_conf.ini')
+conf.read('/home/video/strato3/horizoncam/mission_conf.ini')
 
+def printFrequency(Phase, frequency):
+    print(Phase + " " + frequency)
+now = datetime.datetime.now()
+for section in conf.sections():
+    begin = datetime.datetime.strptime(conf.get(section, 'begin'), '%Y-%m-%d %H:%M')
+    end = datetime.datetime.strptime(conf.get(section, 'end'), '%Y-%m-%d %H:%M')
+    if (now > begin and now < end):
+        try:
+            thread.start_new_thread( printFrequency, (section, conf.get(section, 'PhotosPerMinute'), ) )
+        except:
+            print ("Error: unable to start thread")
 
-def getfrequency():
-    now = datetime.datetime.now()
-    for section in conf.sections():
-        print(section)
-        if (now > datetime.datetime.strptime(conf.get(section, 'begin'), '%Y-%m-%d %H:%M')):
-            print(True)
-        else:
-            print(False)
-
-
-getfrequency()
