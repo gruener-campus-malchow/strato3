@@ -1,4 +1,4 @@
-#!/usr/bin/python3.6
+#!/usr/bin/python3.7m
 import datetime
 import configparser
 import _thread as thread
@@ -6,7 +6,7 @@ import time
 import takephotos
 
 conf = configparser.ConfigParser()
-conf.read('/home/video/strato3/horizoncam/mission_conf.ini')
+conf.read('/home/pi/strato3/horizoncam/mission_conf.ini')
 onlineThreads = []
 
 
