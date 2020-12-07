@@ -38,3 +38,4 @@ Anforderungen an die Teilnehmer*innen:
 Strato2 ist am 04.09.2020 beim dritten Startversuch erfolgreich in den Himmel aufgestiegen und hat sich auf den Weg gemacht.
 Allerdings kam es auf dem Weg nach unten zu einem Ausfall aller GPS-Sender. 
 Strato2 ist nun aus diesem Grund unauffindbar.
+
