@@ -2,7 +2,6 @@ from picamera import PiCamera, Color
 from time import sleep
 from datetime import datetime
 
-speedlist=[2,4,8,10,50,100,200,500]
 
 # init camera
 camera = PiCamera()
@@ -27,10 +26,5 @@ def capture(now):
         print('date: ' + date_time)
         camera.annotate_text = "EARTHCAM: " + date_time
         camera.capture('/home/pi/shots/earth_' + date_time + '.jpg')
-		#for speed in speedlist:
-			#setting shutter speed in microseconds
-			#camera.shutter_speed = speed
-			#print(speed)
-			#camera.capture('/home/pi/shots/earthcam_' + date_time + '(' + str(speed)  + ').jpg')
     finally:
         camera.close
